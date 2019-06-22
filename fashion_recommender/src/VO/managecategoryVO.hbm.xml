@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+	<class name="VO.ManagecategoryVO" table="Managecategory">
+		<id name="categoryId" type="int" column="categoryId">
+			<generator class="increment" />
+		</id>
+		<property name="categoryName">
+			<column name="categoryName" />
+		</property>
+
+		<property name="categoryDescription">
+			<column name="categoryDescription" />
+		</property>
+
+		<property name="deleteStatus">
+			<column name="deleteStatus" />
+		</property>	
+	</class>
+</hibernate-mapping>

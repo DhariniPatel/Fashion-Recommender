@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+	<class name="VO.UserproductVO" table="userproduct">
+		<id name="productId" type="int" column="cId">
+			<generator class="increment" />
+		</id>
+		<property name="productName">
+			<column name="productName" />
+		</property>
+		
+		<property name="productSize">
+			<column name="productSize" />
+		</property>
+
+		<property name="productPrice">
+			<column name="productPrice" />
+		</property>
+		
+		<property name="productQuantity">
+			<column name="productQuantity" />
+		</property>
+		
+		<property name="brandName">
+			<column name="brandName" />
+		</property>
+		
+		<property name="productDescription">
+			<column name="productDescription" />
+		</property>
+
+		<property name="deleteStatus">
+			<column name="deleteStatus" />
+		</property>	
+		
+		<many-to-one name="managecategoryVO" class="VO.ManagecategoryVO" column="categoryID"></many-to-one>
+		<many-to-one name="managesubcategoryVO" class="VO.ManagesubcategoryVO" column="subcategoryID"></many-to-one>
+	</class>
+</hibernate-mapping>

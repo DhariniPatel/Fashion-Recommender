@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+	<class name="VO.CheckoutVO" table="checkout">
+		<id name="checkoutId" type="int" column="checkoutId">
+			<generator class="increment" />
+		</id>
+		
+		<property name="username">
+			<column name="username" />
+		</property>
+
+		
+		<property name="firstname">
+			<column name="firstname" />
+		</property>
+		
+		<property name="lastname">
+			<column name="lastname" />
+		</property>
+
+		<property name="address">
+			<column name="address" />
+		</property>
+		
+		<property name="postcode">
+			<column name="postcode" />
+		</property>			
+		<many-to-one name="loginVO" class="VO.LoginVO" column="loginID"></many-to-one>
+	</class>
+</hibernate-mapping>
